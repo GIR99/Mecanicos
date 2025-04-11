@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Diagnostico1.1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="103eceef-efdd-4500-92f0-e277f5d40d06">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MECANICOS.jrdax"/>
+	<parameter name="Id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Descargas2\\Nuevacarpeta\\LeuraOjeda\\LeuraOjedaMecanicos\\src\\Informes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+diagnostico.IdDiagnostico,
+diagnostico.NumeroCliente,
+cliente.Nombre,
+Cliente.Nombre,
+Cliente.ApellidoP,
+Cliente.ApellidoM,
+Cliente.Direccion,
+Cliente.Telefono,
+diagnostico.NumeroVehiculo,
+vehiculos.vehiculo,
+Vehiculos.Serie,
+Vehiculos.Placa,
+
+Diagnostico.Inspeccion_Cofre_Abierto,
+Diagnostico.EstadoVehiculo,
+Diagnostico.Neumaticos,
+Diagnostico.FrenosDelanteros,
+Diagnostico.FrenosTraseros,
+Diagnostico.Amortiguadores,
+Diagnostico.SuspencionDelantera,
+Diagnostico.SuspencionTrasera,
+Diagnostico.Direccion,
+Diagnostico.BandasYPoleasDeAccion,
+Diagnostico.Mangueras,
+Diagnostico.NivelesDeFluidos,
+Diagnostico.Luces,
+Diagnostico.LimpiaParabrisas,
+Diagnostico.Bateria,
+Diagnostico.BalerosDeRuedasD,
+Diagnostico.BalerosDeRuedasT,
+Diagnostico.SistemaDeEscape,
+Diagnostico.Afinacion,
+Diagnostico.ObservacionesYPuntosAdicionales,
+Diagnostico.Tecnico,
+Diagnostico.FechaDiagnostico,
+diagnostico.IdEstadoCarro,
+EstadoCarro.SalpDelIzq,
+EstadoCarro.PuerDelIzq,
+EstadoCarro.PuerTraIzq,
+EstadoCarro.SalpTraIzq,
+EstadoCarro.SalpDelDer,
+EstadoCarro.PuerDelDer,
+EstadoCarro.PuerTraDer,
+EstadoCarro.SalpTraDer,
+EstadoCarro.DefenDelan,
+EstadoCarro.DefenTrase,
+EstadoCarro.FocIzqDela,
+EstadoCarro.FocDerDela,
+EstadoCarro.FocIzqTras,
+EstadoCarro.FocDerTras,
+EstadoCarro.LLanDelIzq,
+EstadoCarro.LLanDelDer,
+EstadoCarro.LLanTraIzq,
+EstadoCarro.LLanTraDer,
+EstadoCarro.Cofre,
+EstadoCarro.Parabrisas,
+EstadoCarro.Techo,
+EstadoCarro.ParabrisasTrasero,
+EstadoCarro.PuertaCajuela,
+CONCAT (cliente.Nombre,' ',cliente.ApellidoP,' ',cliente.ApellidoM) AS CLIENTE,
+NOW() AS FechaDeEmision
+from diagnostico,cliente,vehiculos,estadocarro
+where
+diagnostico.NumeroCliente=cliente.IdCliente
+and diagnostico.NumeroVehiculo=vehiculos.IdVehiculos
+and diagnostico.IdEstadoCarro=estadocarro.IdEstado
+and diagnostico.IdDiagnostico=$P{Id};]]>
+	</queryString>
+	<field name="IdDiagnostico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NumeroCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ApellidoP" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ApellidoM" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NumeroVehiculo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vehiculo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Serie" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Placa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Inspeccion_Cofre_Abierto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EstadoVehiculo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Neumaticos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FrenosDelanteros" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FrenosTraseros" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Amortiguadores" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SuspencionDelantera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SuspencionTrasera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BandasYPoleasDeAccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Mangueras" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NivelesDeFluidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Luces" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LimpiaParabrisas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Bateria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BalerosDeRuedasD" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BalerosDeRuedasT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SistemaDeEscape" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Afinacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ObservacionesYPuntosAdicionales" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tecnico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaDiagnostico" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdEstadoCarro" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SalpDelIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuerDelIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuerTraIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SalpTraIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SalpDelDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuerDelDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuerTraDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SalpTraDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DefenDelan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DefenTrase" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FocIzqDela" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FocDerDela" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FocIzqTras" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FocDerTras" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LLanDelIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LLanDelDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LLanTraIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LLanTraDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cofre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Parabrisas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Techo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ParabrisasTrasero" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuertaCajuela" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CLIENTE" class="java.lang.String"/>
+	<field name="FechaDeEmision" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="382" height="126" uuid="0d37e10a-7086-403e-a952-219953e21e87"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement x="396" y="0" width="406" height="126" uuid="4a51e405-e901-412a-95a4-55eab08fd55d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="78" y="80" width="218" height="24" uuid="6d8af5bc-9551-4f30-86e4-35616498e168"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[HERMANOS BLANCO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="104" width="218" height="22" uuid="d048978f-f976-4ded-bb99-31ee259eed92"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[EXCELENCIA Y CALIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="0" width="207" height="60" uuid="f6060fb1-27e9-45ca-bbd6-ef9819dbd640"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[FOLIO DE DIAGNOSTICO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="542" y="0" width="260" height="80" forecolor="#FF0000" uuid="6c99f0e2-5c41-455c-bdb1-24d90ef3f5c2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IdDiagnostico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="405" y="80" width="100" height="20" uuid="23080dda-5c21-42b7-97e6-5ce8f3cbfd01"/>
+				<text><![CDATA[Tel: 4443718527]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="100" width="156" height="20" uuid="5b9463ab-5846-4534-b956-19bce518a299"/>
+				<text><![CDATA[Estrella #101 col. Pendencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="60" width="128" height="20" uuid="8b29d12d-6418-43b0-ab49-3645edf8214c"/>
+				<text><![CDATA[RFC:BAOM960520PE1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="547" y="100" width="100" height="20" uuid="59ad126d-1f5f-444d-a2f9-d1e1609eac4e"/>
+				<text><![CDATA[C.P.:78434]]></text>
+			</staticText>
+			<image>
+				<reportElement x="70" y="0" width="225" height="104" uuid="988f7359-7358-4f1a-b031-053851709cd5"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/LogoH.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="188" height="40" uuid="cd589786-b9e3-4d23-a929-10c424dd7528"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="188" y="0" width="164" height="40" uuid="dcc93aa0-9b4f-4d53-9d6e-b8e87243f020"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="352" y="0" width="268" height="40" uuid="fd9eef84-23b3-4d7f-924f-638617be819a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="620" y="0" width="182" height="40" uuid="128baa01-571a-4ea5-8b19-1dedb55187b4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="349" y="40" width="198" height="33" uuid="992ee727-5800-4747-944a-380cf2aa7799"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="692" y="40" width="110" height="33" uuid="6d855a7f-e674-4145-aaea-24af3206dc50"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="547" y="40" width="145" height="33" uuid="6293551f-2b23-4aca-ab4c-d69a21eec61c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="40" width="352" height="33" uuid="8558b068-910a-4f06-9ab5-df9415a2e53f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="188" y="0" width="68" height="40" uuid="6f2eeb52-388b-4e0a-8c32-9c90f721ec57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[FECHA DE EMISION:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="256" y="0" width="96" height="40" uuid="abfbe6df-dcd4-4ffc-847d-22d341067caf"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{FechaDeEmision}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="105" y="0" width="83" height="40" uuid="33327f16-804e-4016-975a-f0ce8035fcc3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{FechaDiagnostico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="0" width="95" height="40" uuid="eca9b068-a038-4e5d-a740-3431a34a956c"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[FECHA DE DIAGNOSTICO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="424" y="0" width="196" height="40" uuid="884c6033-c9a9-473b-937a-3ed0953eaf5f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CLIENTE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="0" width="92" height="40" uuid="c8fc4978-7b69-48eb-bbb9-7c786197fa7d"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CLIENTE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="664" y="0" width="138" height="40" uuid="a753fd01-2d18-40ac-8670-ca238fd108e0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Telefono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="630" y="0" width="86" height="40" uuid="41fa5d6d-9e24-45d9-b80a-86a4e440eed1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TEL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="40" width="107" height="29" uuid="e69b57bd-03d4-4e9d-b7cb-63dcaadcaba6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[DIRECCION:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="40" width="259" height="29" uuid="0903b530-a00c-4817-980e-3015a8b476a3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Direccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="40" width="99" height="33" uuid="4fac77be-34a9-4682-b998-38f138de79ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[VEHICULO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="424" y="40" width="118" height="33" uuid="44e44c79-b687-490d-8057-e9aca76191d6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{vehiculo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="607" y="40" width="75" height="33" uuid="3e98002c-7e28-4b89-8823-7e24680b4bf6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Serie}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="550" y="40" width="56" height="33" uuid="c51acd2a-caaa-4d04-9872-5b4dbe453320"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[MODELO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="742" y="40" width="60" height="33" uuid="8e5cc0e4-e3d1-42ad-8e4a-97fab908ae73"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Placa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="692" y="40" width="50" height="33" uuid="a28b2ace-8dfc-44cc-af2e-efd33ae82bce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PLACA:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="288" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="10" width="186" height="20" uuid="4642c0d8-13f7-4ae7-b121-484de5c970c9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="10" width="186" height="20" uuid="086ff062-650d-4a0f-a117-1739c13f0366"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[INSPECCION DE COFRE ABIERTO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="30" width="186" height="51" uuid="967e8232-c513-41f8-8dfa-ad6284648b6d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="310" y="10" width="124" height="20" uuid="47fae1b7-d35c-48ff-a07a-0a2dd6a01923"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="310" y="11" width="122" height="20" uuid="9a6a1652-f817-401d-bd22-18d5b02efe9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Neumaticos]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="310" y="30" width="124" height="51" uuid="f351f4c8-fbf6-4867-a7c2-1ad8e5c9782a"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="326" y="50" width="18" height="19" backcolor="#33CC00" uuid="84904278-ae38-4da7-ae4c-6128ff68899d"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="361" y="50" width="18" height="19" backcolor="#FFFF00" uuid="0416fc6a-dd87-478e-9b51-1761d700e212"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="396" y="50" width="18" height="19" backcolor="#FF0000" uuid="2e834bf4-2d9c-4517-abbd-596e2824c936"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="434" y="10" width="124" height="20" uuid="b928d135-b613-4a3a-88fa-e1074d9d5235"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="434" y="11" width="124" height="20" uuid="c32935f0-0218-4c4b-89eb-2bba05f609a9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Frenos Delanteros]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="434" y="30" width="124" height="51" uuid="625ce912-162c-457f-a009-b2ccb85819e8"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="450" y="50" width="18" height="19" backcolor="#33CC00" uuid="40002018-d036-48ea-a9f6-be10dcaaf12d"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="485" y="50" width="18" height="19" backcolor="#FFFF00" uuid="49ca31f8-6cf3-4aa9-872c-1ffc87ea08b5"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="520" y="50" width="18" height="19" backcolor="#FF0000" uuid="2b633f4c-4691-4eb0-8e1c-4bea51f4c075"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="186" y="10" width="124" height="20" uuid="2c271002-7a18-46cb-af83-b9521f743621"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="188" y="11" width="124" height="20" uuid="31073458-f68c-4c6b-a362-1b60e7392e50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Estado del vehiculo]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="186" y="30" width="124" height="51" uuid="17122527-e119-4479-b2f0-707509ca3813"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="558" y="10" width="120" height="20" uuid="84643307-9612-4a3e-aab4-e5920531d341"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="558" y="10" width="120" height="19" uuid="5d633624-b194-411e-a5d6-2a1adab5f94f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Frenos Traseros]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="558" y="30" width="120" height="51" uuid="0e9809e7-3375-4fea-abda-803ceacbe9d7"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="570" y="48" width="18" height="19" backcolor="#33CC00" uuid="a8b7d5ce-0cef-4ef3-a635-7cf57ed4a45d"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="605" y="48" width="18" height="19" backcolor="#FFFF00" uuid="b7527bc8-55a0-4ff8-af63-3bbee2d1508e"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="640" y="48" width="18" height="19" backcolor="#FF0000" uuid="2d04b7b7-9f26-428e-9c3e-2d429ee90c45"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="678" y="10" width="124" height="20" uuid="b3e033fb-e190-47e6-aa98-4a716a918138"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="678" y="11" width="124" height="20" uuid="2a2dbd25-7a47-454f-b85c-27f75603ac15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Amortiguadores]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="678" y="30" width="124" height="51" uuid="dfb6fe4e-ecc9-471f-a7c2-2e118b183acf"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="699" y="48" width="18" height="19" backcolor="#33CC00" uuid="43541540-8450-4558-8b0d-0b91cbae88df"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="734" y="48" width="18" height="19" backcolor="#FFFF00" uuid="d6dbc7f0-7500-41f5-87ea-4e5fb4d26fbd"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="769" y="48" width="18" height="19" backcolor="#FF0000" uuid="1c8dde50-4949-4952-8241-25bead7a0ae5"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="0" y="81" width="134" height="20" uuid="5059a2db-5fd5-438d-af22-7a51d616fd15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="101" width="134" height="51" uuid="0c860f73-25e2-4794-aaed-0142509f02dd"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="52" y="119" width="18" height="19" backcolor="#FFFF00" uuid="4454400a-5bc9-4a2a-ab94-f8eae4eddfc2"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="87" y="119" width="18" height="19" backcolor="#FF0000" uuid="3539e1d7-f282-4446-a96d-6aa2eaaee59e"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="17" y="119" width="18" height="19" backcolor="#33CC00" uuid="2dd0a84e-9f1a-4b6d-9c88-b0b27c7665f2"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="134" y="81" width="134" height="20" uuid="aa0e5f73-9814-4d53-9596-a477ce275089"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="134" y="101" width="134" height="51" uuid="f41ab562-e3c7-4347-b662-606d57a7b93c"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="228" y="119" width="18" height="19" backcolor="#FF0000" uuid="ec4518af-1acf-4bf4-9fc2-197fb5d242dc"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="193" y="119" width="18" height="19" backcolor="#FFFF00" uuid="304ea09b-7e64-4fcb-aa33-942e21066da8"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="158" y="119" width="18" height="19" backcolor="#33CC00" uuid="1856453c-9fb0-4b26-896e-e961dc9e77a1"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="268" y="81" width="134" height="20" uuid="12ed77a8-b81e-40de-9196-c97949beb98c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="268" y="101" width="134" height="51" uuid="64fc3092-7e68-48cf-b013-af369f87bbbb"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="291" y="119" width="18" height="19" backcolor="#33CC00" uuid="19f60af7-0211-4eae-b05f-e1780bc2d05e"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="326" y="119" width="18" height="19" backcolor="#FFFF00" uuid="e05f0b8e-5d25-4128-a804-aee6181e723e"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="361" y="119" width="18" height="19" backcolor="#FF0000" uuid="12aeef22-fcb3-4b41-a59c-2da4346320d5"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="402" y="81" width="134" height="20" uuid="5f069f91-955b-4542-a2cb-d5d0056e39c3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="402" y="101" width="134" height="51" uuid="7d12e016-c10d-4740-926a-d6fc5dbe8487"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="432" y="119" width="18" height="19" backcolor="#33CC00" uuid="b6b4b3a1-ff82-415a-9958-4bc7aa7b8b58"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="467" y="119" width="18" height="19" backcolor="#FFFF00" uuid="605e397d-a0d4-4d47-b1ac-c948c9abbd11"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="502" y="119" width="18" height="19" backcolor="#FF0000" uuid="a81132ad-aac3-4d03-a704-912f8e642843"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="536" y="81" width="134" height="20" uuid="28863868-82e3-4712-bf1f-accdcde53acd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="536" y="101" width="134" height="51" uuid="cb239b00-80de-4856-92be-b34d41e4c17a"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="567" y="119" width="18" height="19" backcolor="#33CC00" uuid="71600cb3-5949-4875-a388-0523e71e6c92"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="602" y="119" width="18" height="19" backcolor="#FFFF00" uuid="91b2b89c-68c1-4800-94d0-a6bfeb99f65c"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="637" y="119" width="18" height="19" backcolor="#FF0000" uuid="13e809ce-ce9a-4ad3-be6d-095c3cc479ba"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="670" y="81" width="132" height="20" uuid="21a7f077-f8f2-4a39-9a6e-2c55620104dc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="670" y="101" width="132" height="51" uuid="1837c197-32bb-4083-ba8b-63cc75708ae4"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="692" y="119" width="18" height="19" backcolor="#33CC00" uuid="d28d648e-d18d-446b-9b63-76d80def9a7b"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="727" y="119" width="18" height="19" backcolor="#FFFF00" uuid="c82b5cb5-a5ef-4090-9f12-f3627f5df184"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="762" y="119" width="18" height="19" backcolor="#FF0000" uuid="6c9a0f06-9013-44fd-a760-9e8ea9e69f4e"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="0" y="152" width="134" height="20" uuid="f55720c8-6d19-4e22-88f8-4fc1b5ec2fc0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="172" width="134" height="51" uuid="34432237-e526-4219-a130-9726f66d70ba"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="52" y="190" width="18" height="19" backcolor="#FFFF00" uuid="32f1f663-78b9-4234-b897-1299553edb6f"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="87" y="190" width="18" height="19" backcolor="#FF0000" uuid="0b740e75-0c28-4167-b414-6dade5049186"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="17" y="190" width="18" height="19" backcolor="#33CC00" uuid="4a99caa9-e999-44ba-a32b-4d81a0356d4a"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="134" y="152" width="134" height="20" uuid="d1a337b0-447a-4da9-8e1c-d55c52968633"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="134" y="172" width="134" height="51" uuid="004c00da-8294-4f73-9290-e3c8411735e8"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="228" y="190" width="18" height="19" backcolor="#FF0000" uuid="865c78af-f592-4450-aa65-c8fc78fb18d5"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="193" y="190" width="18" height="19" backcolor="#FFFF00" uuid="2a3163fd-f73d-492d-8a06-8612fc0d305f"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="158" y="190" width="18" height="19" backcolor="#33CC00" uuid="65ef952d-7676-47cb-892b-b8a24839a146"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="268" y="152" width="134" height="20" uuid="ffa58956-f83c-4edd-9d07-9841deaa76d6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="268" y="172" width="134" height="51" uuid="b52c4f83-34cf-4ec7-89e2-f4dd3657210c"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="291" y="190" width="18" height="19" backcolor="#33CC00" uuid="7158fceb-ab49-449f-acb8-8e684222a9ff"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="326" y="190" width="18" height="19" backcolor="#FFFF00" uuid="849a8bfc-e2c1-43a1-9acf-1dd3d98b465a"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="361" y="190" width="18" height="19" backcolor="#FF0000" uuid="8e21d80a-334d-4eda-b947-28ea2929b288"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="402" y="152" width="134" height="20" uuid="56bccafb-d342-437a-957d-64fa3c3302bf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="402" y="172" width="134" height="51" uuid="4dd0a7b9-37e7-4556-89dc-19dd2b8420d6"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="432" y="190" width="18" height="19" backcolor="#33CC00" uuid="b45ae90e-22b5-4fa0-8782-f7e194a7b7a0"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="467" y="190" width="18" height="19" backcolor="#FFFF00" uuid="32d1e8bd-4c52-4388-926c-e8ef22931123"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="502" y="190" width="18" height="19" backcolor="#FF0000" uuid="173cb2e5-08fe-41c7-b850-0d2decd8cccc"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="536" y="152" width="134" height="20" uuid="3f7cc4f8-d48d-4c8f-b8f2-3b0d07fd7a9a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="536" y="172" width="134" height="51" uuid="3e5c2236-9041-4356-8ac9-45ff1053a58b"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="567" y="190" width="18" height="19" backcolor="#33CC00" uuid="f4e62362-d51f-4030-a2cd-eebef53c6e44"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="602" y="190" width="18" height="19" backcolor="#FFFF00" uuid="e95c4421-9596-4344-b49a-1c770c8bcf2e"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="637" y="190" width="18" height="19" backcolor="#FF0000" uuid="64f7f6fa-2185-4307-b05a-cfc99c6b3487"/>
+			</ellipse>
+			<rectangle>
+				<reportElement x="670" y="152" width="132" height="20" uuid="dc458d1d-7d2a-4fe0-9d33-4de004461a5e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="670" y="172" width="132" height="51" uuid="002e3c2a-4de8-4ea9-8b36-0e9eac99b14f"/>
+			</rectangle>
+			<ellipse>
+				<reportElement x="692" y="190" width="18" height="19" backcolor="#33CC00" uuid="dbf574c3-0e2c-4749-9141-d2a0bfdc8371"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="727" y="190" width="18" height="19" backcolor="#FFFF00" uuid="b8de0efc-4562-4564-978d-9b68975ddf77"/>
+			</ellipse>
+			<ellipse>
+				<reportElement x="762" y="190" width="18" height="19" backcolor="#FF0000" uuid="db1d0ba8-5ecf-4d33-886c-ccf4686f222a"/>
+			</ellipse>
+			<textField>
+				<reportElement x="9" y="31" width="167" height="50" uuid="1b3b1426-dd11-4f10-89d2-5be54d1350e5"/>
+				<textFieldExpression><![CDATA[$F{Inspeccion_Cofre_Abierto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="27" width="123" height="54" uuid="7fce5bef-c776-497c-9728-9a799a13e8bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{EstadoVehiculo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="134" y="81" width="134" height="20" uuid="2bb91ff6-8e14-4636-aed2-8ab59f527520"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Suspencion Trasera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="80" width="134" height="20" uuid="ccaf6950-61c6-4a61-ac98-e98b4ab7719d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Bandas Y Poleas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="80" width="132" height="18" uuid="82121460-791d-416f-99bd-d94953363d61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mangueras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="81" width="132" height="20" uuid="3f298ce2-4a3f-4ed7-ab6c-523cab5a46a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Niveles de Fluidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="80" width="132" height="20" uuid="a9c1d23b-b763-4d89-b0db-da11116c5653"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Suspencion Delantera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="81" width="132" height="20" uuid="e067dc45-4ba7-4704-9f67-97e8ed85cc63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Luces]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="152" width="132" height="20" uuid="8cfaab53-7081-496b-80f8-0a9e9c73663b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Bateria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="152" width="132" height="20" uuid="9cc0854f-1d43-47be-aa80-093084cfc8c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sistema de Escape]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="152" width="132" height="20" uuid="570a3d20-2723-47ff-98e3-8ad61bba4b08"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Baleros de Ruedas Traseros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="152" width="134" height="20" uuid="a70999c5-1fd6-4316-a194-a948a8641b61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Baleros De Ruedas Delanteros ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="152" width="132" height="20" uuid="943226d2-1e5c-483c-83b2-c737fe488eeb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Limpia Parabrisas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="667" y="152" width="135" height="20" uuid="5baf294e-c004-4116-99b2-82e2540efa6e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Afinacion]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="286" width="802" height="1" uuid="366b12b5-0e5b-4ad7-a125-6c460bd5e565"/>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="223" width="228" height="20" uuid="fd5d3cc1-39d3-4653-a253-d62332daa186"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="243" width="228" height="43" uuid="1b3745ee-f7db-4b1a-8dad-cd9fbb6e9347"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="223" width="228" height="20" uuid="8797fe52-1c6c-4f62-b19e-94744cd13877"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Observaciones y Puntos A dicionales]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="308" y="35" width="54" height="45" uuid="ed030c57-66a0-4581-837c-e232f88801cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Neumaticos}.equals("BIEN") ? "X" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="33" width="47" height="51" uuid="8dc78682-9a01-4106-8827-5db8c224ce17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Neumaticos}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="35" width="48" height="48" uuid="51296e0b-0869-4f0d-8f56-ef491a67b1ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Neumaticos}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="33" width="47" height="51" uuid="d977268e-819a-4fd9-9af8-ece97aeb096a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FrenosDelanteros}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="34" width="50" height="51" uuid="694cddf0-7c31-4373-82d6-a201b399d111"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FrenosDelanteros}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="35" width="48" height="48" uuid="b22845b0-803c-4818-a773-a0f6c456d42a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FrenosDelanteros}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="592" y="33" width="47" height="51" uuid="88ce68eb-7bcd-4c1a-8a0a-66a5edb1b9b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FrenosTraseros}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="558" y="33" width="45" height="51" uuid="648c723a-9a31-48be-9d30-d11d76ae29eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FrenosTraseros}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="625" y="32" width="48" height="48" uuid="c341c177-fabb-487c-8183-cbf48408c708"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FrenosTraseros}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="721" y="33" width="47" height="51" uuid="215e9b2e-f7ea-4bb4-8875-2bcc88dd6d14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amortiguadores}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="686" y="33" width="48" height="51" uuid="e923d9f6-171b-410c-b90e-9b863144e652"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amortiguadores}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="754" y="32" width="48" height="48" uuid="4a932b68-685f-4278-97de-4f7fdb32eda9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amortiguadores}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="39" y="101" width="46" height="51" uuid="afa2d4e2-638a-41a2-90bd-3b3e70ce2762"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SuspencionDelantera}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="105" width="40" height="48" uuid="ea4bcccf-9931-4a99-b3b9-9d1083c2532b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SuspencionDelantera}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="101" width="48" height="51" uuid="adf66776-691f-4244-9b43-5858c7aeb278"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SuspencionDelantera}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="101" width="35" height="51" uuid="2b291f0d-4190-4c8e-b1bf-e8aeedad8763"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SuspencionTrasera}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="105" width="45" height="48" uuid="ed012287-f28f-4e7d-9b85-53c40e33acbc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SuspencionTrasera}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="101" width="45" height="51" uuid="371f614c-2c52-497c-a133-995e517a29e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SuspencionTrasera}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="349" y="105" width="45" height="48" uuid="6b47fcd7-f3f5-4db4-89b2-0f251cda25d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BandasYPoleasDeAccion}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="101" width="40" height="51" uuid="24d97664-5800-4fff-93ed-9c96eeaafcfe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BandasYPoleasDeAccion}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="102" width="48" height="48" uuid="a04c5fba-8f06-4c85-9c75-e4d291d8baad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BandasYPoleasDeAccion}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="101" width="48" height="51" uuid="bdd9e75b-df69-47ce-9b88-7b331d655345"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Mangueras}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="102" width="48" height="51" uuid="3d5b2970-1734-4ac1-a768-2ed26a766953"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Mangueras}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="491" y="105" width="40" height="48" uuid="13df9b83-1359-4752-9264-212a16ffa539"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Mangueras}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="585" y="101" width="50" height="51" uuid="e28432d4-9c38-42a5-a7cd-758daf2d29a9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NivelesDeFluidos}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="550" y="102" width="50" height="51" uuid="9768e0e9-f0cc-45a2-9ab2-56db76c41081"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NivelesDeFluidos}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="105" width="45" height="48" uuid="2f4d578d-d675-46de-9812-19efffa611b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NivelesDeFluidos}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="678" y="102" width="48" height="51" uuid="b36fd45e-7b38-41fe-a787-994e83957794"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Luces}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="716" y="101" width="40" height="51" uuid="ac8b69e8-9c3c-4e2c-b548-6ddddbb56b8a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Luces}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="752" y="105" width="40" height="48" uuid="426ae333-39c8-4a0f-a03a-d609cbabeee1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Luces}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="39" y="172" width="48" height="51" uuid="18a34792-3f5a-452d-a322-7eb70e7fdd9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LimpiaParabrisas}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="172" width="50" height="51" uuid="61ce3bf1-69a3-4554-9099-4c165673810e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LimpiaParabrisas}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="172" width="48" height="51" uuid="6756ecbc-98c6-4683-b728-9ec37e232ef6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LimpiaParabrisas}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="172" width="48" height="51" uuid="1610243c-8c50-493f-854c-3c62dfe917af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bateria}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="172" width="45" height="51" uuid="bf29d326-1e3c-4266-9737-f7d9adda7b40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bateria}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="172" width="48" height="51" uuid="b4825c9b-1d02-4508-b5b8-657d13fe428b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bateria}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="172" width="46" height="51" uuid="5b39e5c7-2a7b-4567-8f71-72d2553b9cd2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BalerosDeRuedasD}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="172" width="48" height="51" uuid="7d2be98a-0933-48eb-8d45-2ce52c9054be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BalerosDeRuedasD}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="172" width="45" height="51" uuid="8e50d40a-3d9c-4bb8-913d-4e0cf459dcdc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BalerosDeRuedasD}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="172" width="45" height="51" uuid="f7f902af-3257-417f-96ee-9f8d799dffb5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BalerosDeRuedasT}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="172" width="45" height="51" uuid="1445bd7e-3263-4c80-9d13-a10c3da3bbea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BalerosDeRuedasT}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="172" width="48" height="51" uuid="7e37e33f-ba3e-4d70-9ca3-dcf5425e9779"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BalerosDeRuedasT}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="555" y="172" width="45" height="51" uuid="0913ad70-7dae-46ee-b61d-bccb09be4d1c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SistemaDeEscape}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="172" width="45" height="51" uuid="90377c97-a397-424e-8680-8665e092b088"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SistemaDeEscape}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="588" y="172" width="45" height="51" uuid="bb169558-0863-4b7e-97f0-dc7641f95fc5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SistemaDeEscape}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="715" y="172" width="47" height="51" uuid="359eba4c-6a4b-4913-a467-39c1f5e4cd83"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Afinacion}.equals("Requiere Atencion")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="678" y="172" width="48" height="51" uuid="e7f942ea-9594-441c-8bb4-7aa5f6284838"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Afinacion}.equals("BIEN")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="749" y="172" width="45" height="51" uuid="d5d37024-e219-482a-8b8a-3f418aafa980"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Afinacion}.equals("Malo")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="243" width="222" height="44" uuid="20a2f66d-c11a-45e7-a0be-e82665966606"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ObservacionesYPuntosAdicionales}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="309" y="34" width="188" height="20" uuid="77deda92-dead-4560-9d54-f2a186122d3f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="251" y="33" width="304" height="1" uuid="db808453-552f-445d-9182-355e1c186425"/>
+			</line>
+			<staticText>
+				<reportElement x="344" y="0" width="100" height="16" uuid="c0a35466-4dc4-4762-a333-8d1520a62158"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[Firma de enterado]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="237" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="41" uuid="844966bb-4935-4086-864c-cb4a8cb3bf1e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Estado De las Partes Externas Del Carro (Las partes marcadas con X roja son las partes afectadas)]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="-14" y="50" width="311" height="151" uuid="0f7a6726-8411-4b4d-a280-da6222666d1e"/>
+				<subreportParameter name="Id">
+					<subreportParameterExpression><![CDATA[$P{Id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:/leuraojedamecanicos/Informes/Diagnostico2.1P.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>
