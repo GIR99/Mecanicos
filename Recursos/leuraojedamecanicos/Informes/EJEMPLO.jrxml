@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EJEMPLO" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b4a858c6-a3d5-48c7-8135-b6a2204a35fe">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MECANICOS.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="Buscar" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from notas where IdNotas= $P{Buscar} ;]]>
+	</queryString>
+	<field name="IdNotas" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="IdNotas"/>
+		<property name="com.jaspersoft.studio.field.label" value="IdNotas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<field name="NumeroCliente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="NumeroCliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="NumeroCliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<field name="NumeroVehiculo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="NumeroVehiculo"/>
+		<property name="com.jaspersoft.studio.field.label" value="NumeroVehiculo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<field name="NumeroIngresoVehiculo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="NumeroIngresoVehiculo"/>
+		<property name="com.jaspersoft.studio.field.label" value="NumeroIngresoVehiculo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<field name="ManoDeobra" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ManoDeobra"/>
+		<property name="com.jaspersoft.studio.field.label" value="ManoDeobra"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<field name="CostoManoDeObra" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="CostoManoDeObra"/>
+		<property name="com.jaspersoft.studio.field.label" value="CostoManoDeObra"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<field name="Refacciones" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Refacciones"/>
+		<property name="com.jaspersoft.studio.field.label" value="Refacciones"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<field name="CostoRefacciones" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="CostoRefacciones"/>
+		<property name="com.jaspersoft.studio.field.label" value="CostoRefacciones"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<field name="fecha" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="notas"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="41" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="421" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="120" width="200" height="90" uuid="3c2ff69d-97e8-4f7e-8655-ecbb72e272da"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="340" y="110" width="205" height="230" uuid="5ae37ce3-96b9-4228-8e7e-edee1d31fa74"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="30" y="130" width="100" height="30" uuid="aaed537c-b0f2-44dd-acec-9903e48f847a"/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="120" width="180" height="110" uuid="ce2c1d24-b999-4dab-89d6-7458f521bdd3"/>
+				<text><![CDATA[Total de nota:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="30" width="420" height="30" uuid="c8701a83-76ba-4531-a057-61e17a5285fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE EJEMPLO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="290" width="100" height="30" uuid="2169f515-a1f1-4cc4-8d05-b4cf3b146b1e"/>
+				<textFieldExpression><![CDATA[$F{IdNotas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="90" y="290" width="100" height="30" uuid="aacab75d-5eba-4937-b32e-cb9728565a4f"/>
+				<text><![CDATA[IdNotas]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="130" width="100" height="30" uuid="1549249f-ffba-42ae-aab9-ab5d93d77270"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="150" width="100" height="30" uuid="e569c972-e930-403b-a6cd-1018be0cc89d"/>
+				<textFieldExpression><![CDATA[$F{CostoManoDeObra}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Diagnostico2.1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="65563acf-57f7-4133-9c80-312cd671a0a0">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MECANICOS.jrdax"/>
+	<style name="styleLLanta_3">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{LLanTraDer}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleLLanta_2">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{LLanTraIzq}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleLLanta_1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{LLanDelDer}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleLLanta">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{LLanDelIzq}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleDefensa_1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{DefenTrase}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleDefensa">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{DefenDelan}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleFoco1_3">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{FocDerTras}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleFoco1_2">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{FocIzqTras}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleFoco1_1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{FocDerDela}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="styleFoco1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{FocIzqDela}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style13">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{PuertaCajuela}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style12">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{ParabrisasTrasero}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style11">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{Techo}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style10">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{Parabrisas}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style9">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{Cofre}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style8">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{SalpDelDer}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style7">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{PuerDelDer}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style6">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{PuerTraDer}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style5">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{SalpTraDer}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style4">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{SalpTraIzq}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style3">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{PuerTraIzq}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style2">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{PuerDelIzq}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<style name="style1">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{SalpDelIzq}=="MAL"]]></conditionExpression>
+			<style forecolor="#FF0000" backcolor="#FF0033"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="Id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+diagnostico.IdDiagnostico,
+diagnostico.NumeroCliente,
+cliente.Nombre,
+Cliente.Nombre,
+Cliente.ApellidoP,
+Cliente.ApellidoM,
+Cliente.Direccion,
+Cliente.Telefono,
+diagnostico.NumeroVehiculo,
+vehiculos.vehiculo,
+Vehiculos.Serie,
+Vehiculos.Placa,
+
+Diagnostico.Inspeccion_Cofre_Abierto,
+Diagnostico.EstadoVehiculo,
+Diagnostico.Neumaticos,
+Diagnostico.FrenosDelanteros,
+Diagnostico.FrenosTraseros,
+Diagnostico.Amortiguadores,
+Diagnostico.SuspencionDelantera,
+Diagnostico.SuspencionTrasera,
+Diagnostico.Direccion,
+Diagnostico.BandasYPoleasDeAccion,
+Diagnostico.Mangueras,
+Diagnostico.NivelesDeFluidos,
+Diagnostico.Luces,
+Diagnostico.LimpiaParabrisas,
+Diagnostico.Bateria,
+Diagnostico.BalerosDeRuedasD,
+Diagnostico.BalerosDeRuedasT,
+Diagnostico.SistemaDeEscape,
+Diagnostico.Afinacion,
+Diagnostico.ObservacionesYPuntosAdicionales,
+Diagnostico.Tecnico,
+Diagnostico.FechaDiagnostico,
+diagnostico.IdEstadoCarro,
+EstadoCarro.SalpDelIzq,
+EstadoCarro.PuerDelIzq,
+EstadoCarro.PuerTraIzq,
+EstadoCarro.SalpTraIzq,
+EstadoCarro.SalpDelDer,
+EstadoCarro.PuerDelDer,
+EstadoCarro.PuerTraDer,
+EstadoCarro.SalpTraDer,
+EstadoCarro.DefenDelan,
+EstadoCarro.DefenTrase,
+EstadoCarro.FocIzqDela,
+EstadoCarro.FocDerDela,
+EstadoCarro.FocIzqTras,
+EstadoCarro.FocDerTras,
+EstadoCarro.LLanDelIzq,
+EstadoCarro.LLanDelDer,
+EstadoCarro.LLanTraIzq,
+EstadoCarro.LLanTraDer,
+EstadoCarro.Cofre,
+EstadoCarro.Parabrisas,
+EstadoCarro.Techo,
+EstadoCarro.ParabrisasTrasero,
+EstadoCarro.PuertaCajuela,
+CONCAT (cliente.Nombre,' ',cliente.ApellidoP,' ',cliente.ApellidoM) AS CLIENTE
+from diagnostico,cliente,vehiculos,estadocarro
+where
+diagnostico.NumeroCliente=cliente.IdCliente
+and diagnostico.NumeroVehiculo=vehiculos.IdVehiculos
+and diagnostico.IdEstadoCarro=estadocarro.IdEstado
+and diagnostico.IdDiagnostico=$P{Id};]]>
+	</queryString>
+	<field name="IdDiagnostico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NumeroCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ApellidoP" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ApellidoM" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NumeroVehiculo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vehiculo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Serie" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Placa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Inspeccion_Cofre_Abierto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EstadoVehiculo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Neumaticos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FrenosDelanteros" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FrenosTraseros" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Amortiguadores" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SuspencionDelantera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SuspencionTrasera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BandasYPoleasDeAccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Mangueras" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NivelesDeFluidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Luces" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LimpiaParabrisas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Bateria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BalerosDeRuedasD" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BalerosDeRuedasT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SistemaDeEscape" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Afinacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ObservacionesYPuntosAdicionales" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tecnico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaDiagnostico" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdEstadoCarro" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SalpDelIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuerDelIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuerTraIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SalpTraIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SalpDelDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuerDelDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuerTraDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SalpTraDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DefenDelan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DefenTrase" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FocIzqDela" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FocDerDela" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FocIzqTras" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FocDerTras" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LLanDelIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LLanDelDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LLanTraIzq" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LLanTraDer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cofre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Parabrisas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Techo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ParabrisasTrasero" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PuertaCajuela" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CLIENTE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="452" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="437" height="383" uuid="89f36830-6ba9-4d3c-a7e3-377a386d22e6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="437" y="1" width="357" height="204" uuid="c30f6e7a-3473-4330-923e-bb97418e1d0b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="437" y="205" width="357" height="179" uuid="5092e5d4-44b4-44f2-b134-0b65c5d4c911"/>
+			</rectangle>
+			<image>
+				<reportElement x="8" y="26" width="120" height="67" uuid="ddf0a199-6c18-4e82-8f12-7add7c3643f1"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/SalpicaderaCarro120x67.png"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="false">
+				<reportElement style="style1" x="18" y="23" width="100" height="67" forecolor="#FF130F" uuid="d3496e55-4741-4d91-bff9-83d6eee45880"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SalpDelIzq}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="122" y="17" width="90" height="76" uuid="6c6d76f3-e625-4d97-9e35-abddcf7e7119"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroPuerta90x76.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style2" x="128" y="17" width="84" height="73" forecolor="#FF0E0A" uuid="347ff052-d6e1-4db8-ab80-29d3fad7ac8b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PuerDelIzq}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="222" y="17" width="77" height="76" uuid="0a410813-d36f-4974-acba-8f60e2139acf"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroPueraTraseraIzquierda85x82.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style3" x="222" y="14" width="67" height="73" forecolor="#FF0E0A" uuid="62612dae-9a19-4361-8928-badcb663519c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PuerTraIzq}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="299" y="20" width="123" height="73" uuid="2b4e1ee2-d384-4d41-89bd-709a44d46e67"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroSalpicaderaTraseraIzquierda120x67.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style4" x="300" y="19" width="123" height="73" forecolor="#FF0E0A" uuid="553d10dc-ad44-4541-9be9-8ed77f66f327"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SalpTraIzq}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="4" y="136" width="110" height="100" uuid="677f1662-69a0-496c-bb29-210b89445768"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroCofre120x124.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style9" x="1" y="138" width="96" height="94" forecolor="#FF0E0A" uuid="488f8c86-8946-4973-87c4-22c4989811bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cofre}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="114" y="136" width="78" height="100" uuid="38cffd4c-b8c4-4059-8231-bb3ef21242f9"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/PlantillaParabrisas78x120.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style10" x="115" y="136" width="67" height="95" forecolor="#FF0E0A" uuid="a521be37-77ec-47fc-ab07-ada5dccab111"/>
+				<textElement verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Parabrisas}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="182" y="142" width="146" height="90" uuid="4d788f7c-ba29-46c8-a280-4bb7e79d6b08"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroTecho130x93.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style11" x="180" y="158" width="115" height="73" forecolor="#FF0E0A" uuid="0fbc005f-c122-4a29-974b-3b08ca97a706"/>
+				<textElement textAlignment="Center">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Techo}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="308" y="136" width="114" height="112" uuid="b29c9ba3-58bf-46d8-b0a1-862f1db85ae2"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroCajuela120x110.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style12" x="322" y="154" width="42" height="87" forecolor="#FF0E0A" uuid="9fd3e434-ab1b-4526-a0f0-0e09db263fc7"/>
+				<textElement>
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ParabrisasTrasero}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="style13" x="379" y="136" width="43" height="99" forecolor="#FF0E0A" uuid="760cee12-ad3f-4f80-b7e2-770583b806fd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PuertaCajuela}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="3" y="291" width="125" height="82" uuid="193a1706-f3df-4081-a317-030bdbfa0727"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroSalpicaderaTraseraDerecha120x67.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style5" x="2" y="281" width="121" height="83" forecolor="#FF0E0A" uuid="0db79fc7-f727-48ac-b834-f8fe1d1ed075"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SalpTraDer}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="118" y="282" width="85" height="73" uuid="07c171ea-7e9f-43a6-ae55-5128400cdc1d"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroPuertaTraseraDerecha85x82.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style6" x="127" y="291" width="75" height="73" forecolor="#FF0E0A" uuid="5c162083-9af1-406c-902a-c36c6969afe5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PuerTraDer}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="203" y="282" width="90" height="82" uuid="431d4d03-e6b9-4500-a038-12d77dc7505f"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroPuertaDerecha90x76.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style7" x="212" y="282" width="67" height="73" forecolor="#FF0E0A" uuid="e8c6ff3b-f3cb-4c8e-a1c3-fec9ecb9a1c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PuerDelDer}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="309" y="291" width="120" height="64" uuid="2b0c46d2-3b71-431c-846d-aa858be67304"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroSalpicaderaDerecha120x64.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="style8" x="308" y="282" width="108" height="71" forecolor="#FF0E0A" uuid="ce2ee864-a6ff-4a71-b11a-025f7d0ce79d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="50"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SalpDelDer}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="446" y="3" width="118" height="20" uuid="b03b9e76-5034-4aff-9908-afc0e0bac9d8"/>
+				<text><![CDATA[Foco Izquierdo Delantero]]></text>
+			</staticText>
+			<image>
+				<reportElement x="496" y="33" width="29" height="25" uuid="11ffc2b8-e4d8-41b1-8f71-ffb1a8dbd225"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroFoco.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="styleFoco1" x="486" y="30" width="49" height="35" forecolor="#FF0703" uuid="733ab188-6a3f-4904-b949-d126741b2bd3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FocIzqDela}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="676" y="3" width="118" height="20" uuid="75908c43-4294-426f-8452-9144d6475548"/>
+				<text><![CDATA[Foco Derecho Delantero]]></text>
+			</staticText>
+			<image>
+				<reportElement x="742" y="31" width="29" height="29" uuid="e3453d7e-44fe-4826-9fb4-3f50ffaa0878"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroFoco.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="styleFoco1_1" x="722" y="23" width="69" height="49" forecolor="#FF0703" uuid="76fdcb14-aebc-45b5-8c98-ea3bc579bb12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FocDerDela}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="437" y="103" width="109" height="20" uuid="6ce64f5a-3c68-4df3-9984-3d2dbb9bd588"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Foco Izquierdo Trasero]]></text>
+			</staticText>
+			<image>
+				<reportElement x="496" y="123" width="29" height="28" uuid="241a6852-1017-4594-a2d8-178f4c50f900"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroFoco.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="styleFoco1_2" x="486" y="120" width="49" height="37" forecolor="#FF0703" uuid="da7df765-f40c-4169-b281-666c220e738a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FocIzqTras}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="677" y="111" width="113" height="20" uuid="34b148a9-e4ff-422d-a15b-6f6ac6173904"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Foco Derecho Trasero]]></text>
+			</staticText>
+			<image>
+				<reportElement x="739" y="131" width="29" height="29" uuid="082cb338-9f28-4fba-9ab8-8f17015b2048"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/CarroFoco.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="styleFoco1_3" x="725" y="124" width="63" height="43" forecolor="#FF0703" uuid="ebf69dfc-012a-4ef1-8cd1-ecc792032405"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FocDerTras}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="546" y="38" width="149" height="20" uuid="8c64022a-1b3c-4747-8bd5-c4aa868f1946"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Defensa Delantera]]></text>
+			</staticText>
+			<image>
+				<reportElement x="546" y="58" width="149" height="65" uuid="f3d88ec8-2731-45c2-8617-a42672cfd701"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/ParrillaDelanteraFocos120x45.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="styleDefensa" x="546" y="59" width="148" height="65" forecolor="#FF0703" uuid="127d0170-bb78-4df4-abd1-74c03d36e91a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DefenDelan}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="546" y="123" width="149" height="20" uuid="f70216bd-ae3b-4b6d-a718-6eea17a9b00a"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Defensa Trasera]]></text>
+			</staticText>
+			<image>
+				<reportElement x="546" y="136" width="149" height="63" uuid="c3120c9f-8329-41af-9f5d-03d6d523deaf"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/ParrillaTraseraFocos120x50.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="styleDefensa_1" x="546" y="144" width="148" height="63" forecolor="#FF0703" uuid="337ab212-7dfd-40fa-bfc8-bb462950fbda"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DefenTrase}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="479" y="221" width="122" height="20" uuid="ea473b38-674f-4040-b722-1b6ff4d949f7"/>
+				<text><![CDATA[Llanta Izquierda Delantera]]></text>
+			</staticText>
+			<image>
+				<reportElement x="514" y="248" width="50" height="42" uuid="25e95bf4-3c95-4dbe-8498-a2498c55739f"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/llanta50x4.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="668" y="217" width="122" height="20" uuid="8907f8ae-d71e-4462-b8fb-8446daa6b7f7"/>
+				<text><![CDATA[Llanta Derecha Delantera]]></text>
+			</staticText>
+			<image>
+				<reportElement x="713" y="248" width="50" height="42" uuid="6562560f-0911-424d-b6ed-07a79e82fa8a"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/llanta50x4.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="479" y="310" width="122" height="20" uuid="f4d9aa0f-01a3-4cb1-a3b0-732a0a8d8de7"/>
+				<text><![CDATA[Llanta Izquierda Izquierda]]></text>
+			</staticText>
+			<image>
+				<reportElement x="514" y="330" width="50" height="42" uuid="bf584e0d-9a5c-4421-b64e-59c7b80e34c3"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/llanta50x4.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="668" y="310" width="122" height="20" uuid="d11ed5c1-81fb-4daf-9c7f-ac5351701a9b"/>
+				<text><![CDATA[Llanta Derecha Izquierda]]></text>
+			</staticText>
+			<image>
+				<reportElement x="713" y="330" width="50" height="42" uuid="392370a9-b2f2-46ce-88a7-c4f86d0249bf"/>
+				<imageExpression><![CDATA["C:/leuraojedamecanicos/Informes/llanta50x4.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="styleLLanta" x="514" y="247" width="51" height="41" forecolor="#FF0703" uuid="90184400-096d-43f9-8c9a-b74a5755dd0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="32"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LLanDelIzq}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="styleLLanta_1" x="713" y="249" width="51" height="42" forecolor="#FF0703" uuid="f5fd63e0-78c0-419f-b1f3-c3ff4ff4d4e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="32"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LLanDelDer}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="styleLLanta_2" x="514" y="331" width="51" height="42" forecolor="#FF0703" uuid="9e318850-89ba-4439-a55a-86edd9d2e2cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="32"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LLanTraIzq}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="styleLLanta_3" x="713" y="331" width="51" height="42" forecolor="#FF0703" uuid="45631090-4741-4c19-b414-71b0e8d9a896"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="32"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LLanTraDer}.equals("MAL")? "X" : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="379" y="384" width="100" height="16" uuid="ddea89c2-7a0a-4afd-a1b4-fedf1404dc8d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[Firma de enterado]]></text>
+			</staticText>
+			<line>
+				<reportElement x="286" y="417" width="304" height="1" uuid="b8eb315a-1c83-4e72-8d14-bbb0cbd2ede3"/>
+			</line>
+			<staticText>
+				<reportElement x="379" y="417" width="107" height="20" uuid="4b2a88cd-216b-40ee-8d8b-57b069387bba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
