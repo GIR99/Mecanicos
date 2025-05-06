@@ -8,6 +8,7 @@ package leuraojedamecanicos;
 
 import ConexionBD.ConexionMySQL;
 import static java.awt.Color.*;
+import java.awt.Toolkit;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -38,7 +39,7 @@ public final class IngresarVehiculo2 extends javax.swing.JFrame {
         EtiquetaNotaN.setText(""+ID);
         this.setLocationRelativeTo(null);
         EntradaVehiculo.setDocument(new SoloMayusculas());
-        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
     }
 
     /**

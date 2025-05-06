@@ -5,6 +5,7 @@
  */
 package leuraojedamecanicos;
 
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /**
@@ -137,6 +138,7 @@ public class MenuRegistros extends javax.swing.JFrame {
         this.setVisible(false);
         Menu menu=new Menu();
         menu.setVisible(true);
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
     }//GEN-LAST:event_RegresarActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

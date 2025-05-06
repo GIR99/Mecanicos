@@ -7,6 +7,7 @@ package leuraojedamecanicos;
 
 
 import ConexionBD.ConexionMySQL;
+import java.awt.Toolkit;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -28,6 +29,7 @@ public final class Diagnostico extends javax.swing.JFrame {
       
     public Diagnostico() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
         //trasparencia()
         EntradaBusquedaPlaca.setDocument(new SoloMayusculas());
         EntradaTCofreAb.setDocument(new SoloMayusculas());

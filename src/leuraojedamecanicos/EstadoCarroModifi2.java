@@ -10,6 +10,7 @@ import ConexionBD.ConexionMySQL;
 import static java.awt.Color.blue;
 import static java.awt.Color.orange;
 import static java.awt.Color.red;
+import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -30,6 +31,7 @@ public final class EstadoCarroModifi2 extends javax.swing.JFrame {
         initComponents();
         TextID.setText(""+Op);
        ConsultaD(TextID.getText());
+       setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
     }
    
     EstadoCarroModifi2() {

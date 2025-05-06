@@ -29,6 +29,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
      */
     public RegistrarCliente() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
         Mostrar("");
         String nt=ObtenerNumeroRegistroCliente();
         int id=Integer.parseInt(nt);

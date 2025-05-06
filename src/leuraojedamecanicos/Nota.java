@@ -7,6 +7,7 @@ package leuraojedamecanicos;
 
 
 import ConexionBD.ConexionMySQL;
+import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -30,6 +31,7 @@ public class Nota extends javax.swing.JFrame {
         Mostrar("");
         this.setLocationRelativeTo(null);
         EntradaPlaca.setDocument(new SoloMayusculas());
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
         
     }
 

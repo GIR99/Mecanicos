@@ -9,6 +9,7 @@ package leuraojedamecanicos;
 import ConexionBD.ConexionMySQL;
 import ConexionBD.ConexionReporteNotas;
 import java.awt.Frame;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -39,6 +40,7 @@ public class Busquedas extends javax.swing.JFrame {
         Mostrar("");
         this.setLocationRelativeTo(null);
         EntradaPlaca.setDocument(new SoloMayusculas());
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
     }
 
     /**
@@ -52,6 +54,8 @@ public class Busquedas extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        BottonEliminacionNota = new javax.swing.JButton();
+        EditarNota = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         BotonBuscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -72,6 +76,22 @@ public class Busquedas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BottonEliminacionNota.setText("Eliminacion de Nota");
+        BottonEliminacionNota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BottonEliminacionNotaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BottonEliminacionNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, 150, 40));
+
+        EditarNota.setText("Editar Nota");
+        EditarNota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarNotaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(EditarNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 160, 40));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -147,7 +167,7 @@ public class Busquedas extends javax.swing.JFrame {
                 BotonImprimirActionPerformed(evt);
             }
         });
-        getContentPane().add(BotonImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, -1, 40));
+        getContentPane().add(BotonImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 160, 40));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo5.jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-9, 0, 1070, 480));
@@ -199,6 +219,26 @@ public class Busquedas extends javax.swing.JFrame {
             Logger.getLogger(Busquedas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_BotonImprimirActionPerformed
+
+    private void EditarNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarNotaActionPerformed
+        // TODO add your handling code here:
+        String Id=EntradaId.getText();
+        System.out.println("Se llevara este dato a la edicion:"+Id);
+        NotaEdicion Ednota = new NotaEdicion(Id);
+        Ednota.setVisible(true);
+        
+    }//GEN-LAST:event_EditarNotaActionPerformed
+
+    private void BottonEliminacionNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BottonEliminacionNotaActionPerformed
+        // TODO add your handling code here:
+        String Id=EntradaId.getText();
+        System.out.println("Se eliminara la nota"+Id);
+        
+        ConexionMySQL con = new ConexionMySQL();
+        con.ConectarBasedeDatos();
+        con.EliminarNota(Id);
+        Mostrar("");
+    }//GEN-LAST:event_BottonEliminacionNotaActionPerformed
 
     
     public void Mostrar(String Placa)
@@ -287,6 +327,8 @@ public class Busquedas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonBuscar;
     private javax.swing.JButton BotonImprimir;
+    private javax.swing.JButton BottonEliminacionNota;
+    private javax.swing.JButton EditarNota;
     private javax.swing.JTextField EntradaId;
     private javax.swing.JTextField EntradaPlaca;
     private javax.swing.JLabel EtiquetaPrevi;

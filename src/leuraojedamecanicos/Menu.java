@@ -5,6 +5,7 @@
  */
 package leuraojedamecanicos;
 
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /**
@@ -228,7 +229,7 @@ public class Menu extends javax.swing.JFrame {
         Nota nota=new Nota();
         nota.setVisible(true);
         this.setVisible(false);
-        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BottonNotasRegistradasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BottonNotasRegistradasActionPerformed

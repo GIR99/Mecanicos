@@ -7,6 +7,7 @@ package leuraojedamecanicos;
 
 
 import ConexionBD.ConexionMySQL;
+import java.awt.Toolkit;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -26,6 +27,7 @@ public class Registros extends javax.swing.JFrame {
     public Registros() {
         initComponents();
         Mostrar("");
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
     }
 
     /**

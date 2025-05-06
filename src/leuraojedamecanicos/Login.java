@@ -3,6 +3,7 @@ package leuraojedamecanicos;
 
 import ConexionBD.ConexionMySQL;
 import java.awt.Color;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,7 +26,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
          this.setLocationRelativeTo(null);
          txtUsuario.setDocument(new SoloMayusculas());
-         
+         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -97,7 +98,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Version 1.5.5");
+        jLabel4.setText("Version 1.6");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, 80, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo5.jpg"))); // NOI18N

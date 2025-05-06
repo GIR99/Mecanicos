@@ -561,5 +561,47 @@ public void ConectarBasedeDatos(){
     public void JasperNota(String Id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    
+    public void EliminarNota(String id)
+    {
+    try {
+         ps=conexion.prepareStatement("Delete from notas where IdNotas=?");
+         ps.setString(1,id);
+         int res = ps.executeUpdate();
+         if(res>0)
+            {
+                JOptionPane.showMessageDialog(null,"El registro de la nota se a eliminado correctamente");
+            }else
+            {
+                JOptionPane.showMessageDialog(null,"El registro de la nota NO se a eliminado");
+            }
+     } catch (SQLException ex) {
+         Logger.getLogger(ConexionMySQL.class.getName()).log(Level.SEVERE, null, ex);
+     }
+    }
+    
+    public void UpdateNota(int idNota,String manoDeObra,float costoManoObra,String refacciones,float costoRefacciones)
+    {
+    try {
+         ps=conexion.prepareStatement("Update notas set ManoDeObra=?,CostoManoDeObra=?,Refacciones=?,CostoRefacciones=? where IdNotas=?");
+         ps.setString(1,manoDeObra);
+         ps.setFloat(2,costoManoObra);
+         ps.setString(3,refacciones);
+         ps.setFloat(4,costoRefacciones);
+         ps.setInt(5, idNota);
+         int res = ps.executeUpdate();
+         if(res>0)
+            {
+                JOptionPane.showMessageDialog(null,"Los datos de la Nota fueron actualizados Correctamente");
+            }else
+            {
+                JOptionPane.showMessageDialog(null,"Los datos de la Nota no fueron actualizados Correctamente");
+            }
+     } catch (SQLException ex) {
+         Logger.getLogger(ConexionMySQL.class.getName()).log(Level.SEVERE, null, ex);
+     }
+    }
+    
       
 }

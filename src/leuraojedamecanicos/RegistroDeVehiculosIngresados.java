@@ -6,6 +6,7 @@
 package leuraojedamecanicos;
 
 import ConexionBD.ConexionMySQL;
+import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -29,6 +30,7 @@ public class RegistroDeVehiculosIngresados extends javax.swing.JFrame {
         Mostrar("","");
         this.setLocationRelativeTo(null);
         EntradaVehiculo.setDocument(new SoloMayusculas());
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
     }
 
     /**

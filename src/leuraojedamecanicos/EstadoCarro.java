@@ -6,6 +6,7 @@
 package leuraojedamecanicos;
 
 import ConexionBD.ConexionMySQL;
+import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,6 +26,7 @@ public class EstadoCarro extends javax.swing.JFrame {
         initComponents();
         TextID.setText(""+Op);
           this.setLocationRelativeTo(null);
+          setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
        
     }
    

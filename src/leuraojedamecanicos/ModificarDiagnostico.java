@@ -8,6 +8,7 @@ package leuraojedamecanicos;
 
 import ConexionBD.ConexionMySQL;
 import static java.awt.Color.*;
+import java.awt.Toolkit;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -33,6 +34,7 @@ public final class ModificarDiagnostico extends javax.swing.JFrame {
       
     public ModificarDiagnostico(String idv) {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
         EtiquetaNotaN.setText(""+idv);
         this.setLocationRelativeTo(null);
         EntradaVehiculo.setDocument(new SoloMayusculas());

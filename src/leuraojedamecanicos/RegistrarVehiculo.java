@@ -29,6 +29,7 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
      */
     public RegistrarVehiculo() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/LogoH.png")));
         this.setLocationRelativeTo(null);
         jButton1.setVisible(false);
         jButton7.setVisible(false);
